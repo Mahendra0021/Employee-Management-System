@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Office E-M-S</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body style="background-color: cornflowerblue">
+    <div class="container">
+      <br />
+      <h1 style="color: red"><b>Filter Employee Details</b></h1>
+      <hr />
+      <form action="/Filter-Employee" method="post">
+        {% csrf_token %}
+       <b> <label for="First_name" class="form-label"> <b>Full Name</label>
+        <input
+          type="text"
+          class="form-control"
+          value="{{First_name}}"
+          id="First_name"
+          name="fname"
+        />
+        <label for="dpartment" class="form-label"><b>Department</label>
+        <input
+          type="text"
+          class="form-control"
+          value="{{dpartment}}"
+          id="dpartment"
+          name="Department"
+        />
+        <label for="role" class="form-label"><b>Role</label>
+        <input
+          type="text"
+          class="form-control"
+          value="{{role}}"
+          id="role"
+          name="role"
+        />
+        
+        <br />
+        <button type="submit" class="btn btn-primary" style="color: yellow; "><b>Submit</button>
+      </form>
+    </div>
+      <img src="{% static 'EMSF.webp' %}" style="margin-top: -50px; margin-left: 300px;" width="800" height="400"
+                alt="">
+   
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
